@@ -12,7 +12,7 @@ const Login = ({ setIsLoggedIn }) => {
   const [progress, setProgress] = useState(20)
 
   const handleLogin = () => {
-    setIsLoggedIn(false);
+    setIsLoggedIn(true);
   };
 
   const navigate = useNavigate();
@@ -185,7 +185,8 @@ const Login = ({ setIsLoggedIn }) => {
         </div>
   
         <button type="submit" onClick={()=>{
-             studentLogin()
+            //  studentLogin()
+            navigateToDashboard()
    
 
         }} className=" text-lg leading-none font-medium flex justify-center w-full h-auto py-3.5 hover:bg-transparent hover:text-primary bg-primary text-white">Login </button>
@@ -193,11 +194,11 @@ const Login = ({ setIsLoggedIn }) => {
         </form>
 
         <div className=" flex justify-center flex-row lg:mx-20 sm:mx-4 mt-2 mb-5">
-          <span className=" font-regular text-black text-sm items-center">
+          <span className=" font-regular font-poppins text-black text-sm items-center">
             Don't have an account?
           </span>
           <span
-            className=" text-primary font-medium text-lg leading-none cursor-pointer"
+            className=" text-primary font-poppins font-medium text-lg leading-none cursor-pointer"
             onClick={navigateToRegister}
           >
             SignUp

@@ -40,6 +40,7 @@ import NewProgram from "./Program/NewProgram";
 import ProgramList from "./Program/Programlist";
 import Waitlist from "./Program/Waitlist";
 import RegistrationForm from "./Account/RegistrationForm";
+import Messanger from "./Messanger/Messenger"
 
 
 import {
@@ -49,15 +50,36 @@ import {
 } from "react-router-dom";
 import Student from "../src/Students/addStudent";
 
+import i18next from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
+import translationEN from './locales/en/translation.json';
+import translationAR from './locales/ar/translation.json';
 
+i18next.use(initReactI18next).init({
+  lng: 'en', // Set the default language
+  fallbackLng: 'en', // Fallback language in case a translation is missing
+  resources: {
+    en: {
+      translation: translationEN,
+    },
+    ar: {
+      translation: translationAR,
+    },
+  },
+});
 
 function App() {
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <div className="w-screen h-screen">
+
+   
+
+    
+
+    <>
       <Router>
           <NavBar/>
           <Routes>
@@ -131,11 +153,12 @@ function App() {
 
    {/* <RegistrationForm/> */}
 
-
+{/* <Messanger/> */}
 
       </Router>
-   
-    </div>
+     
+    </>
+
   );
 }
 

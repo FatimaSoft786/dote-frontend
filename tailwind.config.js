@@ -20,13 +20,13 @@ module.exports = {
       extend: {
         backgroundImage: { 'background': "url('/src/images/Bg.png')"},
         fontFamily: {
-          'poppins': ['Poppins', 'Inter']
+          poppins: ['Poppins', 'sans-serif'],
+          noto: ['Noto+Naskh+Arabic','sans-serif']
         },
         fontSize: {
           'header': '1rem'
         },
         fontWeight: {
-          light: 300,
           regular: 400,
           medium: 500,
           semibold: 600,
@@ -43,7 +43,11 @@ module.exports = {
           'blue': '#3D70F3',
           'gray': '#667080'
            
-        }
+        },
+        direction: {
+          rtl: 'rtl',
+          ltr: 'ltr',
+        },
       }
     },
     plugins: [],

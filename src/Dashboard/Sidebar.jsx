@@ -82,7 +82,7 @@ const Sidebar = () => {
       >
         <div className=" justify-center mt-3">
           <h1
-            className={`text-white  font-medium text-2xl text-center duration-200 ${
+            className={`text-black  font-medium text-2xl text-center duration-200 ${
               !open && 'invisible'
             }`}
           >
